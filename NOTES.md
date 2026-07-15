@@ -1,9 +1,9 @@
 # Notes
 
-## Sout Keyboard Shortcut
-I can just write `void main() {}` instead of `public static void main(String[] args) {}` for the entry `Main.class`.
+## learn Java 25 in 10 minutes
 
-## Using `record`
+
+### Using `record`
 
 `record` is a shorthand for creating a class.
 
@@ -98,6 +98,21 @@ public class Person {
 }
 ```
 
-Now you can see the point of `record`. 
+Now you can see the point of `record`.
 
 All of this, the fields, the constructor, the getters, toString, equals, and hashCode, is what one line `record Person(String name, int age) {}` replaces.
+
+## Java for Beginners
+
+### `sout` Keyboard Shortcut
+I can just write `void main() {}` instead of `public static void main(String[] args) {}` for the entry `Main.class`.
+
+### Reference Types And Objects Differences
+
+`Memory Stack` is used to store the execution of a thread.
+
+`frame` in the stack: contains all the data of one function call. `int` types' variables' values will be stored in the frame directly whereas `String` and `Object` will only have their address stored.
+
+Those addresses point to the actual location of the values of those objects and strings.
+
+`Heap` is used to store objects and strings.

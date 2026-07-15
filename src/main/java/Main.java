@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -30,6 +31,12 @@ public class Main {
         numbers.forEach(number -> {
             System.out.println(number * 2);
         });
+
+        // Reference Types/Objects
+        int age = 21; // this is primitives
+        Point pointA = new Point(10, 10);
+        System.out.println("pointA = " + pointA); // print: pointA = java.awt.Point[x=10,y=10]
+
     }
 
     static int addNumber (int a, int b) {
