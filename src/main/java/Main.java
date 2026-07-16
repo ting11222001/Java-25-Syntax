@@ -42,6 +42,22 @@ public class Main {
         int heightCopy = increment(height);
         System.out.println("height = " + height); // height = 21
         System.out.println("heightCopy = " + heightCopy); // heightCopy = 22
+
+        // Pass Py Value With Objects
+        Point pointC = new Point(10, 10);
+        Point pointD = pointC;
+
+        pointC.x = 100;
+        pointD.y = 90;
+
+        System.out.println("pointC = " + pointC); // pointC = java.awt.Point[x=100,y=90]
+        System.out.println("pointD = " + pointD); // pointD = java.awt.Point[x=100,y=90]
+
+        pointD = new Point(100, 90);
+        pointD.y = 55;
+
+        System.out.println("pointC = " + pointC); // pointC = java.awt.Point[x=100,y=90]
+        System.out.println("pointD = " + pointD); // pointD = java.awt.Point[x=100,y=55]
     }
 
     static int addNumber (int a, int b) {

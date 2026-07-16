@@ -138,3 +138,48 @@ public class Main {
 ```
 
 ### Pass Py Value With Reference Types
+
+For objects, it's all about copying references, not the actual values.
+
+So when I change the values of either objects, they're changed altogether:
+```java
+public class Main {
+    void main() {
+        // Pass Py Value With Objects
+        Point pointC = new Point(10, 10);
+        Point pointD = pointC;
+
+        pointC.x = 100;
+        pointD.y = 90;
+
+        System.out.println("pointC = " + pointC); // pointC = java.awt.Point[x=100,y=90]
+        System.out.println("pointD = " + pointD); // pointD = java.awt.Point[x=100,y=90]
+    }
+}
+```
+
+If I then create a new object and assign it to `pointD`, then they're referencing to different objects in the heap now.
+
+So `pointC` will remain the same when data in `pointD` has changed:
+```java
+public class Main {
+    void main() {
+        // Pass Py Value With Objects
+        Point pointC = new Point(10, 10);
+        Point pointD = pointC;
+
+        pointC.x = 100;
+        pointD.y = 90;
+
+        System.out.println("pointC = " + pointC); // pointC = java.awt.Point[x=100,y=90]
+        System.out.println("pointD = " + pointD); // pointD = java.awt.Point[x=100,y=90]
+        
+        // Adding:
+        pointD = new Point(100, 90);
+        pointD.y = 55;
+
+        System.out.println("pointC = " + pointC); // pointC = java.awt.Point[x=100,y=90]
+        System.out.println("pointD = " + pointD); // pointD = java.awt.Point[x=100,y=55]
+    }
+}
+```
