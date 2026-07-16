@@ -37,6 +37,11 @@ public class Main {
         Point pointA = new Point(10, 10);
         System.out.println("pointA = " + pointA); // print: pointA = java.awt.Point[x=10,y=10]
 
+        // Pass Py Value With Primitives
+        int height = 21;
+        int heightCopy = increment(height);
+        System.out.println("height = " + height); // height = 21
+        System.out.println("heightCopy = " + heightCopy); // heightCopy = 22
     }
 
     static int addNumber (int a, int b) {
@@ -44,4 +49,8 @@ public class Main {
     }
 
     record Person(String name, int age) {}
+
+    static int increment (int height) {
+        return ++height;
+    }
 }

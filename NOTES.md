@@ -116,3 +116,25 @@ I can just write `void main() {}` instead of `public static void main(String[] a
 Those addresses point to the actual location of the values of those objects and strings.
 
 `Heap` is used to store objects and strings.
+
+### Pass Py Value With Primitives
+
+`height` will be put on the stack. `heightCopy` will be put on the stack separately with the same value as `height` on the stack.
+
+```java
+public class Main {
+    void main() {
+        // Pass Py Value With Primitives
+        int height = 21;
+        int heightCopy = increment(height);
+        System.out.println("height = " + height); // height = 21
+        System.out.println("heightCopy = " + heightCopy); // heightCopy = 22
+    }
+    
+    static int increment (int height) {
+        return ++height;
+    }
+}
+```
+
+### Pass Py Value With Reference Types
