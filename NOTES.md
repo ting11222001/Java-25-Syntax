@@ -183,3 +183,33 @@ public class Main {
     }
 }
 ```
+
+### Arrays
+
+This is how to create fix sized arrays:
+```java
+int[] numbersArray = new int[3];
+numbersArray[0] = 1;
+numbersArray[1] = 33;
+numbersArray[2] = 9;
+System.out.println("numbersArray = " + Arrays.toString(numbersArray)); // numbersArray = [1, 33, 9]
+
+int[] numbersArray2 = {0, 5, 6, 2, 3};
+System.out.println("numbersArray2 = " + Arrays.toString(numbersArray2)); // numbersArray2 = [0, 5, 6, 2, 3]
+numbersArray2[1] = 55;
+System.out.println("numbersArray2 = " + Arrays.toString(numbersArray2)); // numbersArray2 = [0, 55, 6, 2, 3]
+```
+
+Checking the length of the array:
+```java
+System.out.println("numbersArray2.length = " + numbersArray2.length); // numbersArray2.length = 5
+```
+
+I can also have different element types:
+```java
+String[] names = {"Alex", "Betsy"};
+System.out.println(Arrays.toString(names)); // [Alex, Betsy]
+
+double[] numbersArray3 = {0, 5, 6, 2, 3};
+System.out.println(Arrays.toString(numbersArray3)); // [0.0, 5.0, 6.0, 2.0, 3.0]
+```
