@@ -79,6 +79,15 @@ public class Main {
 
         double[] numbersArray3 = {0, 5, 6, 2, 3};
         System.out.println(Arrays.toString(numbersArray3)); // [0.0, 5.0, 6.0, 2.0, 3.0]
+        
+        // default values for arrays
+        int[] defaultIntegerArray = new int[3];
+        System.out.println("defaultIntegerArray = " + Arrays.toString(defaultIntegerArray)); // [0, 0, 0]
+        Arrays.fill(defaultIntegerArray, -1);
+        System.out.println("defaultIntegerArray = " + Arrays.toString(defaultIntegerArray)); // [-1, -1, -1]
+
+        String[] defaultStringArray = new String[3];
+        System.out.println("defaultStringArray = " + Arrays.toString(defaultStringArray)); // [null, null, null]
     }
 
     static int addNumber (int a, int b) {

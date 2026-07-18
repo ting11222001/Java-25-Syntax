@@ -213,3 +213,24 @@ System.out.println(Arrays.toString(names)); // [Alex, Betsy]
 double[] numbersArray3 = {0, 5, 6, 2, 3};
 System.out.println(Arrays.toString(numbersArray3)); // [0.0, 5.0, 6.0, 2.0, 3.0]
 ```
+
+### 0 And Null Values For Arrays
+
+For primitive types, the default values in an array is `0`.
+
+For example, the integer array will be `0` or I can fill it with values like `-1`:
+```java
+// default values for arrays
+int[] defaultIntegerArray = new int[3];
+System.out.println("defaultIntegerArray = " + Arrays.toString(defaultIntegerArray)); // [0, 0, 0]
+Arrays.fill(defaultIntegerArray, -1);
+System.out.println("defaultIntegerArray = " + Arrays.toString(defaultIntegerArray)); // [-1, -1, -1]
+```
+
+For reference types, the default values in an array is `null`.
+
+For example, the String array:
+```java
+String[] defaultStringArray = new String[3];
+System.out.println("defaultStringArray = " + Arrays.toString(defaultStringArray)); // [null, null, null]
+```
